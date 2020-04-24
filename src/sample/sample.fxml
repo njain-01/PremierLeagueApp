@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="" prefHeight="336.0" prefWidth="550.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <RadioButton fx:id="user" layoutX="178.0" layoutY="207.0" mnemonicParsing="false" text="User">
+         <toggleGroup>
+            <ToggleGroup fx:id="type" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="organiser" layoutX="288.0" layoutY="207.0" mnemonicParsing="false" onMouseClicked="#Doitt" text="Organiser" toggleGroup="$type" />
+      <Label fx:id="userName" layoutX="133.0" layoutY="106.0" text="Username" />
+      <TextField fx:id="field1" layoutX="206.0" layoutY="102.0" />
+      <Label fx:id="Password" layoutX="135.0" layoutY="150.0" text="Password" />
+      <TextField fx:id="field2" layoutX="206.0" layoutY="154.0" />
+      <Button fx:id="submit" layoutX="157.0" layoutY="271.0" mnemonicParsing="false" onMouseClicked="#Doitt" text="Submit" />
+      <Button fx:id="back" layoutX="334.0" layoutY="271.0" mnemonicParsing="false" onMouseClicked="#Doitt" text="Back" />
+   </children>
+</AnchorPane>

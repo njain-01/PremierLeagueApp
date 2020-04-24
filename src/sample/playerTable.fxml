@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="447.0" prefWidth="724.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.PlayerTable">
+   <children>
+      <TableView fx:id="table" layoutY="99.0" prefHeight="297.0" prefWidth="724.0" />
+      <Button layoutX="639.0" layoutY="55.0" mnemonicParsing="false" onMouseClicked="#back" text="Back" />
+      <Button layoutX="571.0" layoutY="55.0" mnemonicParsing="false" onMouseClicked="#go" text="Go" />
+      <TextField fx:id="textfield" layoutX="362.0" layoutY="55.0" prefHeight="31.0" prefWidth="174.0" promptText="Enter player name" />
+      <ChoiceBox fx:id="choiceBox" layoutX="178.0" layoutY="55.0" prefWidth="150.0" />
+      <Text layoutX="206.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Filter by Team" />
+      <Button layoutX="488.0" layoutY="402.0" mnemonicParsing="false" onMouseClicked="#add" text="Add" />
+      <Button layoutX="567.0" layoutY="402.0" mnemonicParsing="false" onMouseClicked="#update" text="Update" />
+   </children>
+</AnchorPane>
