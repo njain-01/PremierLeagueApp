@@ -21,8 +21,8 @@
       <Label fx:id="userName" layoutX="133.0" layoutY="106.0" text="Username" />
       <TextField fx:id="field1" layoutX="206.0" layoutY="102.0" />
       <Label fx:id="Password" layoutX="135.0" layoutY="150.0" text="Password" />
-      <TextField fx:id="field2" layoutX="206.0" layoutY="154.0" />
       <Button fx:id="submit" layoutX="157.0" layoutY="271.0" mnemonicParsing="false" onMouseClicked="#Doitt" text="Submit" />
       <Button fx:id="back" layoutX="334.0" layoutY="271.0" mnemonicParsing="false" onMouseClicked="#Doitt" text="Back" />
+      <PasswordField fx:id="field2" layoutX="206.0" layoutY="145.0" />
    </children>
 </AnchorPane>

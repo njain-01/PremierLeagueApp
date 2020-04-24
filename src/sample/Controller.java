@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
@@ -18,7 +19,7 @@ import java.sql.SQLException;
 public class Controller {
     @FXML
     public TextField field1;
-    public TextField field2;
+    public PasswordField field2;
     public RadioButton user;
     public RadioButton organiser;
     public static String usern;
