@@ -9,6 +9,7 @@
 <AnchorPane prefHeight="400.0" prefWidth="508.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Leagueinfo">
    <children>
       <Button layoutX="204.0" layoutY="77.0" mnemonicParsing="false" onMouseClicked="#players" prefHeight="36.0" prefWidth="100.0" text="Players" />
-      <Button layoutX="203.0" layoutY="150.0" mnemonicParsing="false" onMouseClicked="#teams" prefHeight="36.0" prefWidth="100.0" text="Teams" />
+      <Button layoutX="203.0" layoutY="150.0" mnemonicParsing="false" onMouseClicked="#teams" prefHeight="36.0" prefWidth="100.0" text="Team" />
+      <Button layoutX="415.0" layoutY="22.0" mnemonicParsing="false" onMouseClicked="#back" text="Back" />
    </children>
 </AnchorPane>

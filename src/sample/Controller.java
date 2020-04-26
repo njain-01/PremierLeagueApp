@@ -61,7 +61,10 @@ public class Controller {
                 usern=rs.getString("emp_name");
                 alert.setContentText("Logged In Successfully "+usern);
                 alert.show();
-                Parent root = FXMLLoader.load(getClass().getResource("admin_panel.fxml"));
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("admin_panel.fxml"));
+                Parent root = loader.load();
+                AdminPanel ap = loader.getController();
+                ap.showDetails(rs.getInt(1),rs.getString(2),rs.getString(3),rs.getInt(4));
                 Main.window.setTitle("Admin panel");
                 Main.window.setScene(new Scene(root));
             }

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="514.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.SimFixture">
+    <children>
+        <Label layoutX="231.0" layoutY="24.0" text="Run a Match">
+            <font>
+                <Font name="Arial Bold" size="23.0" />
+            </font>
+        </Label>
+        <Label layoutX="207.0" layoutY="80.0" text="Match Id" />
+        <ChoiceBox fx:id="matchSelector" layoutX="308.0" layoutY="76.0" prefHeight="25.0" prefWidth="39.0" />
+        <Label layoutX="93.0" layoutY="121.0" text="Home Team">
+            <font>
+                <Font name="Arial Bold" size="20.0" />
+            </font>
+        </Label>
+        <Label layoutX="368.0" layoutY="121.0" text="Away Team">
+            <font>
+                <Font name="Arial Bold" size="20.0" />
+            </font>
+        </Label>
+        <ImageView fx:id="homeTeam" fitHeight="118.0" fitWidth="153.0" layoutX="91.0" layoutY="152.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../Logos/Arsenal.png" />
+            </image>
+        </ImageView>
+        <ImageView fx:id="awayTeam" fitHeight="118.0" fitWidth="153.0" layoutX="364.0" layoutY="152.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../Logos/Bournemouth.png" />
+            </image>
+        </ImageView>
+        <ProgressBar fx:id="progress" layoutX="244.0" layoutY="339.0" prefHeight="18.0" prefWidth="271.0" progress="0.0" />
+        <Button fx:id="simulate" layoutX="112.0" layoutY="335.0" mnemonicParsing="false" text="Play Match" onMouseClicked="#runMatch"/>
+        <Label fx:id="homeScore" layoutX="193.0" layoutY="276.0" text="0">
+            <font>
+                <Font name="Arial Narrow" size="35.0" />
+            </font>
+        </Label>
+        <Label layoutX="295.0" layoutY="276.0" text="-">
+            <font>
+                <Font name="Arial Narrow" size="35.0" />
+            </font>
+        </Label>
+        <Label fx:id="awayScore" layoutX="372.0" layoutY="276.0" text="0">
+            <font>
+                <Font name="Arial Narrow" size="35.0" />
+            </font>
+        </Label>
+        <TextArea fx:id="details" layoutX="150.0" layoutY="378.0" prefHeight="92.0" prefWidth="289.0" />
+        <Button fx:id="submit" layoutX="269.0" layoutY="474.0" mnemonicParsing="false" text="Add Result" onMouseClicked="#addResultToTable"/>
+    </children>
+</AnchorPane>

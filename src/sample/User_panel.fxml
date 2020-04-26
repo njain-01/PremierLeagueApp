@@ -9,12 +9,12 @@
 <AnchorPane prefHeight="497.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.User_panel">
    <children>
       <Button layoutX="58.0" layoutY="58.0" mnemonicParsing="false" onMouseClicked="#profile" prefHeight="49.0" prefWidth="129.0" text="MY PROFILE" />
-      <Button layoutX="420.0" layoutY="58.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="129.0" text="TICKETS" />
+      <Button layoutX="420.0" layoutY="58.0" mnemonicParsing="false" onMouseClicked="#ticket" prefHeight="49.0" prefWidth="129.0" text="TICKETS" />
       <Button layoutX="58.0" layoutY="158.0" mnemonicParsing="false" onMouseClicked="#pt" prefHeight="49.0" prefWidth="129.0" text="POINTS TABLE" />
-      <Button layoutX="420.0" layoutY="158.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="129.0" text="RESULTS" />
+      <Button layoutX="420.0" layoutY="158.0" mnemonicParsing="false" onMouseClicked="#result" prefHeight="49.0" prefWidth="129.0" text="RESULTS" />
       <Button layoutX="417.0" layoutY="349.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="129.0" text="FANTASY " />
       <Button layoutX="55.0" layoutY="349.0" mnemonicParsing="false" onMouseClicked="#leagueinfo" prefHeight="49.0" prefWidth="129.0" text="LEAGUE INFO" />
-      <Button layoutX="417.0" layoutY="249.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="129.0" text="STATS" />
+      <Button layoutX="417.0" layoutY="249.0" mnemonicParsing="false" onMouseClicked="#stats" prefHeight="49.0" prefWidth="129.0" text="STATS" />
       <Button layoutX="55.0" layoutY="249.0" mnemonicParsing="false" onMouseClicked="#fixture" prefHeight="49.0" prefWidth="129.0" text="FIXTURES" />
    </children>
 </AnchorPane>

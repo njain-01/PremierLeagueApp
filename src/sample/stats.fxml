@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="315.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Stats">
+   <children>
+      <Text layoutX="217.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Top Statistics">
+         <font>
+            <Font name="Britannic Bold" size="28.0" />
+         </font>
+      </Text>
+      <ChoiceBox fx:id="choicebox" layoutX="165.0" layoutY="116.0" prefHeight="28.0" prefWidth="270.0" />
+      <Text fx:id="ansbox" layoutX="141.0" layoutY="216.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="318.6708984375">
+         <font>
+            <Font name="Berlin Sans FB Bold" size="25.0" />
+         </font>
+      </Text>
+      <Button layoutX="268.0" layoutY="248.0" mnemonicParsing="false" onMouseClicked="#back" text="Back" />
+   </children>
+</AnchorPane>

@@ -20,4 +20,9 @@ public class Leagueinfo {
         Main.window.setTitle("Teams");
         Main.window.setScene(new Scene(root));
     }
+    public void back(MouseEvent mouseEvent) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("User_panel.fxml"));
+        Main.window.setTitle("User panel");
+        Main.window.setScene(new Scene(root));
+    }
 }

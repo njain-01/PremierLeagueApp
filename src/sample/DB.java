@@ -26,7 +26,7 @@ public class DB {
         try {
             String DEVICE = "com.mysql.cj.jdbc.Driver";
             Class.forName(DEVICE);
-            String PATH = "jdbc:mysql://localhost:3306/league";
+            String PATH = "jdbc:mysql://localhost:3306/league2";
             String USER = "root";
             String PASSWORD = "1234";
             conn = DriverManager.getConnection(PATH, USER, PASSWORD);

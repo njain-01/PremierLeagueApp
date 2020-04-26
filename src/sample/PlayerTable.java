@@ -51,7 +51,7 @@ public class PlayerTable {
         {
             if (i==1 || i==4 || i==7 || i==9)
             {
-                TableColumn<Integer,teaminPT> tc= new TableColumn<>(rs.getMetaData().getColumnName(i));
+                TableColumn<Integer,player> tc= new TableColumn<>(rs.getMetaData().getColumnName(i));
                 tc.setCellValueFactory(new PropertyValueFactory<>(rs.getMetaData().getColumnName(i)));
                 list.add(tc);
             }
