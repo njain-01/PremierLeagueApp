@@ -40,7 +40,7 @@ public class AdminPanel {
     }
 
     public void simulateMatch(MouseEvent mouseEvent) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("simMatch.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("simFixture.fxml"));
         Main.window.setTitle("Match Results");
         Main.window.setScene(new Scene(root));
     }
