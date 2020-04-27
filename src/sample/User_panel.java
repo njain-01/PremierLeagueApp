@@ -1,13 +1,24 @@
 package sample;
 
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.input.MouseEvent;
 
 import java.io.IOException;
 
 public class User_panel {
+    @FXML
+    public Button lquiz;
+    @FXML
+    private void initialize()
+    {
+        if (!Controller.quiz){
+            lquiz.setDisable(true);
+        }
+    }
     public void profile(MouseEvent e) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("profile.fxml"));
         Main.window.setTitle("My Profile");
@@ -45,6 +56,18 @@ public class User_panel {
     public void result(MouseEvent mouseEvent) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("resultTable.fxml"));
         Main.window.setTitle("Results");
+        Main.window.setScene(new Scene(root));
+    }
+
+    public void logout(MouseEvent mouseEvent) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
+        Main.window.setTitle("Log in");
+        Main.window.setScene(new Scene(root));
+    }
+
+    public void fantasy(MouseEvent mouseEvent) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("quiz.fxml"));
+        Main.window.setTitle("League Quiz");
         Main.window.setScene(new Scene(root));
     }
 }

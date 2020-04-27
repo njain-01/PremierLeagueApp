@@ -29,7 +29,7 @@ public class Fixtures {
     @FXML
     private void initialize() throws SQLException {
         Connection conn=DB.getConnection();
-        PreparedStatement stmt=conn.prepareStatement("select * from schedule");
+        PreparedStatement stmt=conn.prepareStatement("select * from schedule where match_id not in (select match_id from result);");
         ResultSet rs=stmt.executeQuery();
         ArrayList<fixtures_obj> arr= new ArrayList<>();
         while (rs.next()){
@@ -100,7 +100,7 @@ public class Fixtures {
                 Connection conn=DB.getConnection();
                 PreparedStatement stmt= null;
                 try {
-                    stmt = conn.prepareStatement("select * from schedule where team_home=? or team_other=?");
+                    stmt = conn.prepareStatement("select * from (select * from schedule where match_id not in (select match_id from result)) T where team_home=? or team_other=?");
                     stmt.setString(1,tname);
                     stmt.setString(2,tname);
                     ResultSet rs=stmt.executeQuery();

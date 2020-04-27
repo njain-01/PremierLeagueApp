@@ -80,5 +80,6 @@ public class AdminPanel {
         Parent root = FXMLLoader.load(getClass().getResource("teamStats.fxml"));
         Main.window.setTitle("Team Stats");
         Main.window.setScene(new Scene(root));
+        
     }
 }

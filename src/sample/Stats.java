@@ -25,7 +25,7 @@ public class Stats {
     public ChoiceBox choicebox;
     @FXML
     private void initialize() throws SQLException{
-        String opts[]={"Player with most goals","Player with most assists","Option3"};
+        String opts[]={"Player with most goals","Player with most assists","Max number of goals by any player","Team with most goals in a single match","Player with most goals in a single match"};
         choicebox.setItems(FXCollections.observableArrayList(opts));
 
 
@@ -74,7 +74,60 @@ public class Stats {
                         e.printStackTrace();
                     }
                 }
+                else if(opt==2){
 
+                    ResultSet rs=null;
+                    try {
+                        stmt=conn.prepareStatement("SELECT MAX(myCount) from(SELECT player, Count(*) myCount FROM goal GROUP BY player)as T");
+                        rs=stmt.executeQuery();
+                    } catch (SQLException e) {
+                        e.printStackTrace();
+                    }
+                    try {
+                        if (rs.next())
+                        {
+                            ansbox.setText(rs.getString(1));
+                        }
+                    } catch (SQLException e) {
+                        e.printStackTrace();
+                    }
+                }
+                else if(opt==3){
+
+                    ResultSet rs=null;
+                    try {
+                        stmt=conn.prepareStatement("SELECT team from(SELECT team, Count(*) myCount FROM goal GROUP BY team,match_id) as T where myCount in (SELECT MAX(myCount) from(SELECT team, Count(*) myCount FROM goal GROUP BY team,match_id) as T)");
+                        rs=stmt.executeQuery();
+                    } catch (SQLException e) {
+                        e.printStackTrace();
+                    }
+                    try {
+                        if (rs.next())
+                        {
+                            ansbox.setText(rs.getString(1));
+                        }
+                    } catch (SQLException e) {
+                        e.printStackTrace();
+                    }
+                }
+                else if(opt==4){
+
+                    ResultSet rs=null;
+                    try {
+                        stmt=conn.prepareStatement("SELECT name from player where player_id in (SELECT player from(SELECT player, Count(*) myCount FROM goal GROUP BY player, match_id) as T where myCount in (SELECT MAX(myCount) from(SELECT player, Count(*) myCount FROM goal GROUP BY player, match_id) as T))");
+                        rs=stmt.executeQuery();
+                    } catch (SQLException e) {
+                        e.printStackTrace();
+                    }
+                    try {
+                        if (rs.next())
+                        {
+                            ansbox.setText(rs.getString(1));
+                        }
+                    } catch (SQLException e) {
+                        e.printStackTrace();
+                    }
+                }
             }
         });
     }

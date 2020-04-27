@@ -23,6 +23,7 @@ public class Controller {
     public RadioButton user;
     public RadioButton organiser;
     public static String usern;
+    public static boolean quiz=true;
     public void Doitt(MouseEvent e) throws SQLException, IOException {
         Connection conn= DB.getConnection();
         String id = field1.getText();
@@ -36,6 +37,7 @@ public class Controller {
             {
                 Alert alert = new Alert(Alert.AlertType.INFORMATION);
                 usern=rs.getString("user_name");
+                quiz=true;
                 alert.setContentText("Logged In Successfully "+usern);
                 alert.show();
                 Parent root = FXMLLoader.load(getClass().getResource("User_panel.fxml"));
@@ -81,5 +83,15 @@ public class Controller {
 //        ResultSet rs= stmt.executeQuery();
 //        if (rs.next())
 //            System.out.println(rs.getString(2));
+    }
+
+    public void newuser(MouseEvent mouseEvent) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("newuser.fxml"));
+        Main.window.setTitle("New User");
+        Main.window.setScene(new Scene(root));
+    }
+
+    public void exit(MouseEvent mouseEvent) {
+        System.exit(0);
     }
 }

@@ -1,16 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.AdminPanel">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.AdminPanel">
    <children>
       <Button fx:id="schedule" layoutX="73.0" layoutY="123.0" mnemonicParsing="false" onMouseClicked="#scheduleFixture" prefHeight="36.0" prefWidth="130.0" text="Schedule A Fixture" />
       <Button fx:id="result" layoutX="364.0" layoutY="123.0" mnemonicParsing="false" onMouseClicked="#simulateMatch" prefHeight="36.0" prefWidth="139.0" text="Add Result of Match" />
-      <Button fx:id="sponsor" layoutX="399.0" layoutY="212.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="103.0" text="Top Sponsor &amp; Teams" onMouseClicked="#teamDetails"/>
-      <Button fx:id="ticket" layoutX="73.0" layoutY="210.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="103.0" text="Ticket Sales" onMouseClicked="#ticketSales" />
+      <Button fx:id="sponsor" layoutX="399.0" layoutY="212.0" mnemonicParsing="false" onMouseClicked="#teamDetails" prefHeight="36.0" prefWidth="103.0" text="Top Sponsor &amp; Teams" />
+      <Button fx:id="ticket" layoutX="73.0" layoutY="210.0" mnemonicParsing="false" onMouseClicked="#ticketSales" prefHeight="36.0" prefWidth="103.0" text="Ticket Sales" />
       <Label layoutX="179.0" layoutY="27.0" text="Administration Control">
          <font>
             <Font name="Arial Narrow Bold" size="27.0" />
@@ -24,6 +28,6 @@
       <Label fx:id="name" layoutX="227.0" layoutY="76.0" />
       <Label fx:id="dept" layoutX="364.0" layoutY="76.0" />
       <Label fx:id="contact" layoutX="503.0" layoutY="76.0" />
-      <Button fx:id="logOut" layoutX="289.0" layoutY="302.0" mnemonicParsing="false" text="Log Out" onMouseClicked="#goBack"/>
+      <Button fx:id="logOut" layoutX="246.0" layoutY="301.0" mnemonicParsing="false" onMouseClicked="#goBack" text="Log Out" />
    </children>
 </AnchorPane>

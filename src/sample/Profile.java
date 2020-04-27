@@ -1,5 +1,7 @@
 package sample;
 
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -29,6 +31,24 @@ public class Profile {
     public TextField favplayer;
     @FXML
     private void initialize() throws SQLException {
+        age.textProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String> observable, String oldValue,
+                                String newValue) {
+                if (!newValue.matches("\\d*")) {
+                    age.setText(newValue.replaceAll("[^\\d]", ""));
+                }
+            }
+        });
+        favplayer.textProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String> observable, String oldValue,
+                                String newValue) {
+                if (!newValue.matches("\\d*")) {
+                    favplayer.setText(newValue.replaceAll("[^\\d]", ""));
+                }
+            }
+        });
         Connection conn= DB.getConnection();
         PreparedStatement stmt=conn.prepareStatement("select * from users where user_name=?");
         stmt.setString(1,Controller.usern);

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.image.*?>
 <?import java.lang.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
@@ -22,7 +23,13 @@
       <TextField fx:id="field1" layoutX="206.0" layoutY="102.0" />
       <Label fx:id="Password" layoutX="135.0" layoutY="150.0" text="Password" />
       <Button fx:id="submit" layoutX="157.0" layoutY="271.0" mnemonicParsing="false" onMouseClicked="#Doitt" text="Submit" />
-      <Button fx:id="back" layoutX="334.0" layoutY="271.0" mnemonicParsing="false" onMouseClicked="#Doitt" text="Back" />
+      <Button fx:id="back" layoutX="334.0" layoutY="271.0" mnemonicParsing="false" onMouseClicked="#exit" text="Exit" />
       <PasswordField fx:id="field2" layoutX="206.0" layoutY="145.0" />
+      <Button layoutX="237.0" layoutY="271.0" mnemonicParsing="false" onMouseClicked="#newuser" text="New User" />
+      <ImageView fitHeight="73.0" fitWidth="283.0" layoutX="138.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Logos/PL.jpg" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

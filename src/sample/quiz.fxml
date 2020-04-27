@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="520.0" prefWidth="520.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Quiz">
+   <children>
+      <Text layoutX="60.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Q1) How many teams are there in league?" />
+      <Text layoutX="60.0" layoutY="227.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Q2) Who is the captain of Liverpool?" />
+      <Text layoutX="60.0" layoutY="312.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Q3) Which one is the home stadium of manchester united?" />
+      <Text fill="#ee1212" layoutX="161.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Chance to win a FREE Ticket!" textAlignment="CENTER" wrappingWidth="210.6708984375">
+         <font>
+            <Font name="Comic Sans MS" size="30.0" />
+         </font>
+      </Text>
+      <RadioButton fx:id="a1" layoutX="60.0" layoutY="167.0" mnemonicParsing="false" text="20">
+         <toggleGroup>
+            <ToggleGroup fx:id="q1" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton layoutX="136.0" layoutY="167.0" mnemonicParsing="false" text="25" toggleGroup="$q1" />
+      <RadioButton layoutX="212.0" layoutY="167.0" mnemonicParsing="false" text="22" toggleGroup="$q1" />
+      <RadioButton layoutX="59.0" layoutY="250.0" mnemonicParsing="false" text="Ronaldo">
+         <toggleGroup>
+            <ToggleGroup fx:id="q2" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="a2" layoutX="161.0" layoutY="250.0" mnemonicParsing="false" text="Jordan Henderson" toggleGroup="$q2" />
+      <RadioButton layoutX="337.0" layoutY="250.0" mnemonicParsing="false" text="David Villa" toggleGroup="$q2" />
+      <RadioButton layoutX="59.0" layoutY="343.0" mnemonicParsing="false" text="Anfield">
+         <toggleGroup>
+            <ToggleGroup fx:id="q3" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="a3" layoutX="161.0" layoutY="343.0" mnemonicParsing="false" text="Old Trafford" toggleGroup="$q3" />
+      <RadioButton layoutX="301.0" layoutY="343.0" mnemonicParsing="false" text="Goodison park" toggleGroup="$q3" />
+      <Button layoutX="165.0" layoutY="432.0" mnemonicParsing="false" onMouseClicked="#submit" text="Submit" />
+      <Button layoutX="301.0" layoutY="432.0" mnemonicParsing="false" onMouseClicked="#back" text="Back" />
+   </children>
+</AnchorPane>
