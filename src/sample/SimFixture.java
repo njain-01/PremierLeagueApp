@@ -369,4 +369,10 @@ public class SimFixture {
         Main.window.setScene(new Scene(root));
 
     }
+
+    public void back(MouseEvent mouseEvent) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("admin_panel.fxml"));
+        Main.window.setTitle("Admin panel");
+        Main.window.setScene(new Scene(root));
+    }
 }
