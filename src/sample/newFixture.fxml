@@ -31,6 +31,6 @@
         <ChoiceBox fx:id="time" layoutX="412.0" layoutY="278.0" prefWidth="150.0" />
         <ChoiceBox fx:id="refree" layoutX="139.0" layoutY="278.0" prefWidth="150.0" />
         <Button layoutX="212.0" layoutY="336.0" mnemonicParsing="false" text="Fix" onMouseClicked="#scheduleMatch" />
-        <Button layoutX="327.0" layoutY="336.0" mnemonicParsing="false" text="Cancel" />
+        <Button layoutX="327.0" layoutY="336.0" mnemonicParsing="false" text="Cancel" onMouseClicked="#back" />
     </children>
 </AnchorPane>

@@ -141,4 +141,10 @@ public class NewFixture {
         Main.window.setScene(new Scene(root));
 
     }
+
+    public void back(MouseEvent mouseEvent) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("admin_panel.fxml"));
+        Main.window.setTitle("Admin Panel");
+        Main.window.setScene(new Scene(root));
+    }
 }
